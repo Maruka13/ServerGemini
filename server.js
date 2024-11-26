@@ -1,6 +1,6 @@
 import express from "express"
 
-cost posts = [
+const posts = [
     {
         descrição: "Foto teste",
         imagem: "http://placecats.com/millie/300/150",    //exemplo
