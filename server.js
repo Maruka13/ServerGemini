@@ -1,34 +1,9 @@
 import express from "express"
 
 const posts = [
-    {
-        descrição: "Foto teste",
-        imagem: "http://placecats.com/millie/300/150"  //link exemplo
-    },
-    {
-        descrição: "Foto teste2",
-        imagem: "http://placecats.com/millie/300/150"
-    },
-    {
-        descrição: "Foto teste3",
-        imagem: "http://placecats.com/millie/300/150"
-    },
-    {
-        descrição: "Foto teste4",
-        imagem: "http://placecats.com/millie/300/150"
-    },
-    {
-        descrição: "Foto teste5",
-        imagem: "http://placecats.com/millie/300/150"
-    },
-    {
-        descrição: "Foto teste5",
-        imagem: "http://placecats.com/millie/300/150"
-    },
-    {
-        descrição: "Foto teste6",
-        imagem: "http://placecats.com/millie/300/150"
-    }
+    {id:1, descrição: "Foto teste", imagem: "http://placecats.com/millie/300/150"},  //link exemplo
+    {id:2, descrição: "Foto teste2", imagem: "http://placecats.com/millie/300/150"},
+    {id:3, descrição: "Foto teste3", imagem: "http://placecats.com/millie/300/150"},   
 ];
 
 const app = express();
@@ -40,4 +15,15 @@ app.listen(3000, () => {
 
 app.get("/posts", (req, res) => {
     res.status(200).json(posts);
+});
+
+function buscarPostPorID(id) {
+    return posts.findIndex((post) => {
+        return post.id === Number(id)
+    })
+}
+
+app.get("/posts/:id", (req, res) => {
+    const index = buscarPostPorID(req.params.id)
+    res.status(200).json(posts[index]);
 });
