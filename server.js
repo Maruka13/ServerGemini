@@ -3,22 +3,31 @@ import express from "express"
 const posts = [
     {
         descrição: "Foto teste",
-        imagem: "http://placecats.com/millie/300/150",    //exemplo
-
+        imagem: "http://placecats.com/millie/300/150"  //link exemplo
+    },
+    {
         descrição: "Foto teste2",
-        imagem: "http://placecats.com/millie/300/150",
-
+        imagem: "http://placecats.com/millie/300/150"
+    },
+    {
         descrição: "Foto teste3",
-        imagem: "http://placecats.com/millie/300/150",
-
+        imagem: "http://placecats.com/millie/300/150"
+    },
+    {
         descrição: "Foto teste4",
-        imagem: "http://placecats.com/millie/300/150",
-
+        imagem: "http://placecats.com/millie/300/150"
+    },
+    {
         descrição: "Foto teste5",
-        imagem: "http://placecats.com/millie/300/150",
-
+        imagem: "http://placecats.com/millie/300/150"
+    },
+    {
+        descrição: "Foto teste5",
+        imagem: "http://placecats.com/millie/300/150"
+    },
+    {
         descrição: "Foto teste6",
-        imagem: "http://placecats.com/millie/300/150",
+        imagem: "http://placecats.com/millie/300/150"
     }
 ];
 
